@@ -1,0 +1,12 @@
+.hover {
+  transition: 0.3s ease-in-out all;
+  transform: initial;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &.max:hover {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,30 @@
+<section class="row my-5">
+
+  <article
+    class="col-lg-3 col-md-6 col-12 mb-4"
+    *ngFor="let pokemon of pokemons"
+  >
+    <div class="card hover">
+      <div class="card-body text-center  p-2 p-md-4">
+        <img
+          [src]="pokemon?.imageUrl"
+          [alt]="pokemon?.name"
+          [title]="pokemon?.name"
+          class="d-block mx-auto hover max"
+        />
+        <hr>
+        <h2 class="lead my-3 pokemon-name hover max">{{ pokemon?.name | uppercase }}</h2>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<div
+  class="row my-4"
+  *ngIf="pokemons && pokemons.length === 0"
+>
+  <div class="col-12">
+    <p class="alert alert-warning border">Nenhum Pokémon encontrado.</p>
+  </div>
+</div>
